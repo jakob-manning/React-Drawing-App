@@ -1,0 +1,6 @@
+export const SET_PADDING = "SET_ PADDING"
+export const GRAY_SCALE = "GRAY_SCALE"
+export const UPDATE_BOOLEAN = "UPDATE_BOOLEAN"
+export const UPDATE_VALUE = "UPDATE_VALUE"
+export const UPDATE_OBJECT = "UPDATE_OBJECT"
+export const UPDATE_STRING = "UPDATE_STRING"

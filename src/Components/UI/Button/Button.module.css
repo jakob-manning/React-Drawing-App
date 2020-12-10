@@ -1,0 +1,25 @@
+.Button {
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    background-color: white;
+    color: gray;
+    border: 2px solid gray;
+}
+
+.Button:hover {
+    background-color: gray;
+    color: white;
+}
+
+.selected {
+    background-color: gray;
+    color: white;
+}

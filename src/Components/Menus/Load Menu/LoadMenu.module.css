@@ -1,0 +1,22 @@
+.LoadMenu {
+
+}
+
+.loadItem {
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    width: 90%;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    margin: 20px 0px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.loadItem:hover {
+    background-color: gray;
+    color: white;
+}

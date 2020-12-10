@@ -1,24 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import BubbleContainer from "./Containers/BubbleContainer/BubbleContainer";
+import Wrapper from "./hoc/Wrapper/Wrapper";
+import Menus from "./Containers/Menus/Menus";
+import React from "react"
+import SideDrawer from "./Components/UI/SideDrawer/SideDrawer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Wrapper>
+          <Menus/>
+          <BubbleContainer />
+      </Wrapper>
   );
 }
 
