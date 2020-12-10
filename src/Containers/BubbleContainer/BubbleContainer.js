@@ -82,14 +82,15 @@ class BubbleContainer extends React.Component {
         }
 
 
-        //calculate opposite type of parent
+        //calculate type based on mouse button and mobile click mode
         let type="column"
+        console.log(this.props.primaryClick)
         if(this.state.twoMouseButton === true){
             if(event.button === 2){
                 type = "row"
             }
         }
-        else if(currentBubble.type === "column"){
+        if(!this.props.primaryClick){
             type = "row"
         }
 
@@ -255,6 +256,7 @@ const mapStateToProps = state => {
         newDataToLoad: state.newDataToLoad,
         newBubbleStructure: state.newBubbleStructure,
         paintMode: state.paintMode,
+        primaryClick: state.primaryClick,
     }
 }
 

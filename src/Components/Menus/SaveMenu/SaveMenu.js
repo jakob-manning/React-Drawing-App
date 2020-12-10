@@ -14,7 +14,7 @@ function SaveMenu(props) {
                    type={"text"}
                    onChange={(event) => props.change (event)}
             />
-            <br/>
+            <br></br>
             <Button click={props.submit}>Save</Button>
         </Auxiliary>
     )

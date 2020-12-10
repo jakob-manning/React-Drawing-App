@@ -8,4 +8,11 @@
     margin: auto;
     font-size: 3em;
     pointer-events: none;
+    display: none;
+}
+
+@media (hover: hover) {
+    .Instructions{
+        display: unset;
+    }
 }

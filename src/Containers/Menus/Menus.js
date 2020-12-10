@@ -8,6 +8,8 @@ import Axios from "axios";
 import Toolbar from "../../Components/Toolbar/Toolbar";
 import {connect} from "react-redux";
 import SideDrawer from "../../Components/UI/SideDrawer/SideDrawer";
+import MobileButtons from "../../Components/MobileButtons/MobileButtons";
+import {UPDATE_BOOLEAN} from "../../store/actions";
 
 class Menus extends React.Component {
     constructor(props) {
@@ -22,6 +24,7 @@ class Menus extends React.Component {
             error: false,
             networkData: '',
             loadError: false,
+            primaryClick: true,
 
         }
     }
@@ -95,6 +98,18 @@ class Menus extends React.Component {
         this.axiosGet()
     }
 
+    primaryClickHandler = () => {
+        this.setState({primaryClick: true})
+        this.props.updateStore(UPDATE_BOOLEAN, {state:'primaryClick', value:true})
+        console.log("Primary Click True")
+    }
+
+    secondaryClickHandler = () => {
+        this.setState({primaryClick: false})
+        this.props.updateStore(UPDATE_BOOLEAN, {state:'primaryClick', value:false})
+        console.log("Primary Click False")
+    }
+
 
     render() {
 
@@ -119,13 +134,18 @@ class Menus extends React.Component {
                               artTitle={this.state.artTitle}
                               saved={this.state.saved}
                     />
-                    />
                 </Modal>
                 <Toolbar
                     show={this.state.toolBar}
-                    toolbarClickHandler={this.toolbarClickHandler}>
+                    toolbarClickHandler={this.toolbarClickHandler}
+
+                >
                     <Tools saveHandler={this.saveHandler} loadHandler={this.loadHandler} />
                 </Toolbar>
+                <MobileButtons primaryClick={this.state.primaryClick}
+                               primaryClickHandler={this.primaryClickHandler}
+                               secondaryClickHandler={this.secondaryClickHandler}
+                />
             </Auxiliary>
         );
     }

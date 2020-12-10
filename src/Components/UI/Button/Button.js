@@ -10,7 +10,10 @@ const Button = (props) => {
     }
 
     return (
-        <button onClick={props.click} className={[classes.Button, specialClasses].join(' ')}>{props.children}</button>
+        <button onClick={props.click}
+                className={[classes.Button, specialClasses].join(' ')}>
+            {props.children}
+        </button>
     )
 }
 

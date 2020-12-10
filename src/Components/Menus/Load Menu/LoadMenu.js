@@ -51,7 +51,7 @@ class LoadMenu extends React.Component {
 
         return (
             <Auxiliary>
-                <h3>Load a Work of Art</h3>
+                <h3>Load</h3>
                 {this.props.error}
                 <br/>
                 {artWorks}

@@ -2,6 +2,7 @@ import Draggable from "react-draggable";
 import React from "react";
 import Tools from "./Tools/Tools";
 import classes from "./Toolbar.module.css"
+import Auxiliary from "../../hoc/Auxiliary/Auxiliary";
 
 class Toolbar extends React.Component {
     render() {
@@ -23,22 +24,14 @@ class Toolbar extends React.Component {
         }
 
         return (
-            <Draggable
-                handle=".handle"
-                axis={"x"}
-                cancel=".content"
-                bounds={"parent"}
-                // defaultPosition={{x: 0, y: 0}}
-                position={null}
-                // grid={[25, 25]}
-                scale={1}>
+            <Auxiliary>
                 <div style={inlineStyle} className={[classes.Toolbar, classes.Handle, "handle"].join(' ')}>
                     {header}
                     <div className={[classes.tools, "content"].join(' ')}>
                         {content}
                     </div>
                 </div>
-            </Draggable>
+            </Auxiliary>
         )
     }
 }

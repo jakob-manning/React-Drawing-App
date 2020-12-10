@@ -8,7 +8,8 @@ const initialState = {
     reset: false,
     painting: true,
     bubbleStructure: {},
-    color: "#FFFFFF"
+    color: "#FFFFFF",
+    primaryClick: true,
 };
 
 const reducer = (state = initialState, action) => {
