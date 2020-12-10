@@ -198,10 +198,13 @@ class BubbleContainer extends React.Component {
     }
 
     loadNewDataHandler = () =>{
+        let nextKey = this.props.newBubbleStructure.length + 1
+
         this.setState({
-            bubbleStructure: [...this.props.newBubbleStructure],
-            nextKey: this.props.newBubbleStructure.length + 1
+            bubbleStructure: {...this.props.newBubbleStructure},
+            nextKey
         })
+        console.log(this.props.newBubbleStructure)
         this.props.updateStore(UPDATE_BOOLEAN, {state:'newDataToLoad', value:false})
 
     }
