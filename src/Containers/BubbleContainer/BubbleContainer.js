@@ -199,6 +199,9 @@ class BubbleContainer extends React.Component {
 
     loadNewDataHandler = () =>{
         let nextKey = this.props.newBubbleStructure.length + 1
+        if(!Array.isArray(this.props.newBubbleStructure)) {
+            nextKey = Object.keys(this.props.newBubbleStructure).length + 1
+        }
 
         this.setState({
             bubbleStructure: {...this.props.newBubbleStructure},
